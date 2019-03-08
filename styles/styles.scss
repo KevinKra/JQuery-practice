@@ -1,4 +1,5 @@
 $primary-color: #eee;
+$primary-color2: #ddd;
 $secondary-color: #d6c8a0;
 $shadow-color: #776e53;
 $font-color: #333;
@@ -42,16 +43,31 @@ $font-color: #333;
 
 body {
 	@include flex-column;
+	@include font-styles;
 	align-items: center;
 	justify-content: center;
 	height: 100vh;
-	border: 1px solid red;
 	background-color: $secondary-color;
+}
+
+.btn {
+	@include container;
+	cursor: pointer;
+	padding: 5px;
+	width: 45%;
+	box-shadow: -2px 2px 0px $shadow-color;
+	transition: active .09s ease-in-out;
+	&:active {
+		transform: translateX(-2px);
+		box-shadow: 0px 1px 0px $shadow-color;
+	}
+	&:focus {
+		outline: none;
+	}
 }
 
 #main-content {
 	@include flex-column;
-	@include font-styles;
 	@include container;
 }
 
@@ -95,7 +111,7 @@ body {
 	@include flex-row;
 	justify-content: space-between;
 	margin: 1rem auto;
-	max-width: 200px;
+	max-width: 300px;
 }
 
 
