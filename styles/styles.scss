@@ -1,6 +1,7 @@
 $primary-color: #eee;
 $secondary-color: #d6c8a0;
 $shadow-color: #776e53;
+$font-color: #333;
 
 @mixin flex-row {
 	display: flex;
@@ -9,6 +10,18 @@ $shadow-color: #776e53;
 @mixin flex-column {
 	display: flex;
 	flex-direction: column;
+}
+
+@mixin font-styles {
+	font-size: 12px;
+	font-family: 'Press Start 2P', cursive;
+	color: $font-color;
+}
+
+@mixin input-text {
+	margin: 5px 0;
+	padding: 5px;
+	width: 170px;
 }
 
 *:before, 
@@ -28,11 +41,13 @@ body {
 
 #main-content {
 	@include flex-column;
+	@include font-styles;
 	align-items: center;
-	border: 3px solid $shadow-color;
+	box-shadow: -5px 5px $shadow-color;
+	border-radius: 15px;
 	background-color: $primary-color;
 	margin: 0 auto;
-	width: 50%;
+	width: 500px;
 }
 
 .title-content {
@@ -42,28 +57,36 @@ body {
 
 //Character creation form
 #creation-form {
-	border: 1px solid red;
+	margin: .5rem;
 	text-align: center;
+	width: 70%;
 }
 
 .name-selection {
 	@include flex-column;
+	align-items: center;
+	input {
+		@include input-text;
+	}
 }
+
+// input[type="text"] {
+// 	width: 150px;
+// }
 
 #choose-class {
 	@include flex-column;
 	div {
 		@include flex-row;
 		justify-content: space-between;
-		border: 1px solid red;
+		padding: .5rem 0;
 	}
 }
 
 .output {
 	@include flex-row;
 	justify-content: space-between;
-	border: 1px solid red;
-	margin: 0 auto;
+	margin: 1rem auto;
 	max-width: 200px;
 }
 
