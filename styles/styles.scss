@@ -12,6 +12,16 @@ $font-color: #333;
 	flex-direction: column;
 }
 
+@mixin container {
+	align-items: center;
+	box-shadow: -5px 5px $shadow-color;
+	border-radius: 15px;
+	background-color: $primary-color;
+	margin: 0 auto;
+	width: 500px;
+	border: 2px solid $shadow-color;
+}
+
 @mixin font-styles {
 	font-size: 12px;
 	font-family: 'Press Start 2P', cursive;
@@ -42,16 +52,14 @@ body {
 #main-content {
 	@include flex-column;
 	@include font-styles;
-	align-items: center;
-	box-shadow: -5px 5px $shadow-color;
-	border-radius: 15px;
-	background-color: $primary-color;
-	margin: 0 auto;
-	width: 500px;
+	@include container;
 }
 
-.title-content {
+#title-content {
+	@include container;
 	text-align: center;
+	padding: .5rem;
+	margin: .5rem;
 }
 
 
