@@ -15,18 +15,18 @@ $font-color: #333;
 
 @mixin container {
 	align-items: center;
-	box-shadow: -5px 5px $shadow-color;
-	border-radius: 15px;
 	background-color: $primary-color;
+	border-radius: 15px;
+	border: 2px solid $shadow-color;
+	box-shadow: -5px 5px $shadow-color;
 	margin: 0 auto;
 	width: 500px;
-	border: 2px solid $shadow-color;
 }
 
 @mixin font-styles {
-	font-size: 12px;
-	font-family: 'Press Start 2P', cursive;
 	color: $font-color;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 12px;
 }
 
 @mixin input-text {
@@ -45,21 +45,25 @@ body {
 	@include flex-column;
 	@include font-styles;
 	align-items: center;
-	justify-content: center;
-	height: 100vh;
 	background-color: $secondary-color;
+	height: 100vh;
+	justify-content: center;
+}
+
+input {
+	outline: none;
 }
 
 .btn {
 	@include container;
+	box-shadow: -2px 2px 0px $shadow-color;
 	cursor: pointer;
 	padding: 5px;
-	width: 45%;
-	box-shadow: -2px 2px 0px $shadow-color;
 	transition: active .09s ease-in-out;
+	width: 45%;
 	&:active {
-		transform: translateX(-2px);
 		box-shadow: 0px 1px 0px $shadow-color;
+		transform: translateX(-2px);
 	}
 	&:focus {
 		outline: none;
@@ -69,13 +73,14 @@ body {
 #main-content {
 	@include flex-column;
 	@include container;
+	min-height: 350px;
 }
 
 #title-content {
 	@include container;
-	text-align: center;
-	padding: .5rem;
 	margin: .5rem;
+	padding: .5rem;
+	text-align: center;
 }
 
 
@@ -94,12 +99,9 @@ body {
 	}
 }
 
-// input[type="text"] {
-// 	width: 150px;
-// }
-
 #choose-class {
 	@include flex-column;
+	margin-top: 1rem;
 	div {
 		@include flex-row;
 		justify-content: space-between;
@@ -107,6 +109,7 @@ body {
 	}
 }
 
+//button output section
 .output {
 	@include flex-row;
 	justify-content: space-between;
