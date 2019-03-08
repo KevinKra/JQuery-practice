@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<link rel="stylesheet" type="text/css" href="styles/normalize.css">
+<link rel="stylesheet" type="text/css" href="styles/styles.css">
+<body>
+	<header class="title-content">
+		<h1 id="header-title">Snogger's World</h1>
+		<p id="header-p">A Family Fun Adventure</p>
+	</header>
+	<main id="main-content">
+		<h2 id="creation-title">Character Creation</h2>
+		<form action="" id="creation-form">
+			<p>Create your character</p>
+				<div>
+					<label for="choose-name">Character Name</label>
+					<input type="text" name="choose-name" id="choose-name">		
+				</div>
+				<section id="choose-class">
+					<p>Choose your class</p>
+					<div>
+						<label for="choose-hunter">Hunter</label>
+						<input type="radio" name="class" value="hunter" id="choose-hunter">
+					</div>
+					<div>
+						<label for="choose-intellect">Intellect</label>
+						<input type="radio" name="class" value="intellect" id="choose-intellect">
+					</div>
+					<div>
+						<label for="choose-soothsayer">Soothsayer</label>
+						<input type="radio" name="class" value="soothsayer" id="choose-soothsayer">
+					</div>
+				</section>
+				<section id="output">
+					<button id="submit-btn" class="btn">Submit</button>
+					<button id="clear-btn" class="btn">Reset</button>
+				</section>
+		</form>
+	</main>
+</body>
+</html> 	
