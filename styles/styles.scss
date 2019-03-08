@@ -1,7 +1,77 @@
-#main-content {
-	border: 1px solid blue;
+$primary-color: #eee;
+$secondary-color: #d6c8a0;
+$shadow-color: #776e53;
+
+@mixin flex-row {
+	display: flex;
 }
 
+@mixin flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+*:before, 
+*:after, 
+* {
+	box-sizing: border-box;
+}
+
+body {
+	@include flex-column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	border: 1px solid red;
+	background-color: $secondary-color;
+}
+
+#main-content {
+	@include flex-column;
+	align-items: center;
+	border: 3px solid $shadow-color;
+	background-color: $primary-color;
+	margin: 0 auto;
+	width: 50%;
+}
+
+.title-content {
+	text-align: center;
+}
+
+
+//Character creation form
 #creation-form {
 	border: 1px solid red;
+	text-align: center;
 }
+
+.name-selection {
+	@include flex-column;
+}
+
+#choose-class {
+	@include flex-column;
+	div {
+		@include flex-row;
+		justify-content: space-between;
+		border: 1px solid red;
+	}
+}
+
+.output {
+	@include flex-row;
+	justify-content: space-between;
+	border: 1px solid red;
+	margin: 0 auto;
+	max-width: 200px;
+}
+
+
+
+
+
+
+
+
+
