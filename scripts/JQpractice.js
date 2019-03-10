@@ -57,14 +57,17 @@ $j("#submit-btn").attr("disabled", "disabled");
 // $j("form :disabled").css("color", "red");
 // $j("form :enabled").css("color", "blue");
 
-//comment out question 11.
-
 // 12. Can you target form elements by their type?
 // yes, :reset, :radio, :submit, etc.
 
-// 13. Cache all text inputs.
-const textInputs = $j("input[type=text]");
-textInputs.attr("type", "submit");
+// 13. Cache all text inputs and change them to submit buttons.
+// const textInputs = $j("input[type=text]");
+// textInputs.attr("type", "submit");
 
+//comment out questions 11 and 13.
 
+// 14. Target the creation title class and change its HTML to "Character Creation"
+$j(".creation-title").html("Character Creation")
 
+// 15. Target the same title selection and add the class cap-letters.
+$j("#main-content").find("h2").addClass("cap-letters");
