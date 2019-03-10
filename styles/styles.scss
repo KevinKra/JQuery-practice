@@ -68,6 +68,9 @@ input {
 	&:focus {
 		outline: none;
 	}
+	&:disabled {
+		cursor: default;
+	}
 }
 
 #main-content {
