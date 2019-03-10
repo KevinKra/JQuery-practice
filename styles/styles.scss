@@ -73,6 +73,10 @@ input {
 	}
 }
 
+.cap-letters {
+	text-transform: uppercase;
+}
+
 #main-content {
 	@include flex-column;
 	@include container;
