@@ -49,3 +49,22 @@ $j("input").filter("input[name=class]").attr("type", "text");
 // CHALLENGE part 2: use the 'not' method to change all the previously modified inputs back to radio type.
 $j("input").not("input[name=choose-name]").attr("type", "radio");
 
+// 10. Disable the submit button.
+$j("#submit-btn").attr("disabled", "disabled");
+
+// 11. Target the disabled submit button via its disabled attribute and change the text color to red;
+// Change enabled inputs in the form to blue;
+// $j("form :disabled").css("color", "red");
+// $j("form :enabled").css("color", "blue");
+
+//comment out question 11.
+
+// 12. Can you target form elements by their type?
+// yes, :reset, :radio, :submit, etc.
+
+// 13. Cache all text inputs.
+const textInputs = $j("input[type=text]");
+textInputs.attr("type", "submit");
+
+
+
